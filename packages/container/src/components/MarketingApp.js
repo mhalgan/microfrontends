@@ -5,7 +5,7 @@ const MarketingApp = () => {
   const ref = useRef(null);
 
   useEffect(() => {
-    // ref.current keeps a reference to the div
+    // ref.current keeps a reference to the div returned by the component
     mount(ref.current);
   });
 
