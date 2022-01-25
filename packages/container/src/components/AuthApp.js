@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 import { mount } from "auth/AuthApp";
 import { useHistory } from "react-router-dom";
 
-const MarketingApp = ({ onSignIn }) => {
+const AuthApp = ({ onSignIn }) => {
   // ref.current keeps a reference to the div returned by the component
   const ref = useRef(null);
   const history = useHistory();
@@ -27,4 +27,4 @@ const MarketingApp = ({ onSignIn }) => {
   return <div ref={ref} />;
 };
 
-export default MarketingApp;
+export default AuthApp;
