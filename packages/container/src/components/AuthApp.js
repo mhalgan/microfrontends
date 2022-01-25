@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 import { mount } from "auth/AuthApp";
 import { useHistory } from "react-router-dom";
 
-const MarketingApp = () => {
+const MarketingApp = ({ onSignIn }) => {
   // ref.current keeps a reference to the div returned by the component
   const ref = useRef(null);
   const history = useHistory();
@@ -18,6 +18,7 @@ const MarketingApp = () => {
           history.push(nextPathname);
         }
       },
+      onSignIn,
     });
 
     history.listen(onParentNavigate);
